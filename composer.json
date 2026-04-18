@@ -1,0 +1,38 @@
+{
+    "name": "intervention/image-tempest",
+    "description": "Tempest framework integration of Intervention Image",
+    "homepage": "https://image.intervention.io",
+    "keywords": [
+        "image",
+        "gd",
+        "imagick",
+        "watermark",
+        "thumbnail",
+        "resize",
+        "laravel"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oliver Vogel",
+            "email": "oliver@intervention.io",
+            "homepage": "https://intervention.io"
+        }
+    ],
+    "require": {
+        "php": "^8.5",
+        "intervention/image": "^4.0",
+        "tempest/core": "^3.9",
+        "tempest/container": "^3.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Intervention\\Image\\Tempest\\": "src"
+        }
+    },
+    "extra": {
+        "tempest": {
+            "can-discover": true
+        }
+    }
+}
