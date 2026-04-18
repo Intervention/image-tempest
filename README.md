@@ -45,11 +45,9 @@ The configuration files looks like this.
 
 ```php
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
-use Intervention\Image\Tempest\Config;
+use Intervention\Image\Tempest\Config as ImageConfig;
 
-use function Tempest\env;
-
-return new Config(
+return new ImageConfig(
     /*
     |--------------------------------------------------------------------------
     | Image Driver
@@ -64,7 +62,7 @@ return new Config(
     |   - \Intervention\Image\Drivers\Vips\Driver::class
     */
 
-    driver: env('IMAGE_DRIVER', GdDriver::class),
+    driver: \Tempest\env('IMAGE_DRIVER', GdDriver::class),
 
     /*
     |--------------------------------------------------------------------------
