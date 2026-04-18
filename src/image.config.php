@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
-use Intervention\Image\Tempest\Config;
+use Intervention\Image\Tempest\Config as ImageConfig;
 
-return new Config(
+return new ImageConfig(
     /*
     |--------------------------------------------------------------------------
     | Image Driver
