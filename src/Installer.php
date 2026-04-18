@@ -7,8 +7,6 @@ namespace Intervention\Image\Tempest;
 use Tempest\Core\Installer as InstallerAttribute;
 use Tempest\Core\PublishesFiles;
 
-use function Tempest\src_path;
-
 class Installer
 {
     use PublishesFiles;
@@ -17,7 +15,7 @@ class Installer
     public function install(): void
     {
         $publishFiles = [
-            __DIR__ . '/image.config.php' => src_path('image.config.php'),
+            __DIR__ . '/image.config.php' => \Tempest\src_path('image.config.php'),
         ];
 
         foreach ($publishFiles as $source => $destination) {

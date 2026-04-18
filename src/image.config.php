@@ -1,9 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 use Intervention\Image\Tempest\Config;
-
-use function Tempest\env;
 
 return new Config(
     /*
@@ -19,7 +19,7 @@ return new Config(
     |   - \Intervention\Image\Drivers\Imagick\Driver::class
     |   - \Intervention\Image\Drivers\Vips\Driver::class
     */
-    driver: env('IMAGE_DRIVER', GdDriver::class),
+    driver: \Tempest\env('IMAGE_DRIVER', GdDriver::class),
     /*
     |--------------------------------------------------------------------------
     | Configuration Options
