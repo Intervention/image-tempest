@@ -27,6 +27,7 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^12.0",
+        "mockery/mockery": "^1.6",
         "phpstan/phpstan": "^2.1",
         "squizlabs/php_codesniffer": "^4",
         "slevomat/coding-standard": "~8.0"
@@ -34,6 +35,11 @@
     "autoload": {
         "psr-4": {
             "Intervention\\Image\\Tempest\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Intervention\\Image\\Tempest\\Tests\\": "tests"
         }
     },
     "config": {
